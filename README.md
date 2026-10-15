@@ -1,6 +1,11 @@
 # LangChain Intro
 
-Estudos de introdução ao **LangChain** e **LangGraph** com TypeScript (pós-graduação UNIPDS).
+Projeto da aula **Introdução ao LangChain.js: Pipes, Fluxos Condicionais e Gerador de Apps**,
+do módulo **APIs de IA Generativa e Prompt Engineering** da pós-graduação
+**Engenharia de Software em IA Aplicada** da **UNIPDS**.
+
+Estudos de **LangChain.js** e **LangGraph** com TypeScript: composição de pipes, fluxos
+condicionais entre nós do grafo e geração de apps a partir de templates.
 
 ## Stack
 
