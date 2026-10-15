@@ -1,4 +1,4 @@
-import { GraphState } from "../graph";
+import type { GraphState } from "../graph.ts";
 
 export function identifyIntent(state: GraphState): GraphState{
     const input = state.message.at(-1)?.text ?? ""

@@ -15,3 +15,32 @@ test('command upper trasnforms message into UPPERCASE', async () => {
     assert.equal(response.statusCode, 200)
     assert.equal(response.body, expected)
 })
+
+test('unknown command falls back to help message', async () => {
+    const app = createServer()
+    const msg = 'hello, how are you?'
+    const expected = "Unknown command. Try 'make this uppercase' or 'convert to lowecase'"
+
+    const response = await app.inject({
+        method: 'POST',
+        url: '/chat',
+        body:{ question:msg}
+    })
+    assert.equal(response.statusCode, 200)
+    assert.equal(response.body, expected)
+})
+
+test('command lower trasnforms message into lowercase', async () => {
+    const app = createServer()
+    const msg = 'MAKE THIS MESSAGE LOWERCASE'
+    const expected = msg.toLowerCase()
+
+    const response = await app.inject({
+        method: 'POST',
+        url: '/chat',
+        body:{ question:msg}
+    })
+    assert.equal(response.statusCode, 200)
+    assert.equal(response.body, expected)
+})
+
