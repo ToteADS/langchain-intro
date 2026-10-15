@@ -25,7 +25,7 @@ export const createServer = () => {
             const response = await graph.invoke({
                 message: [new HumanMessage(question)]
             })
-            return reply.send(response.output)
+            return reply.send(response)
         } catch (error) {
             console.error('Error handling /chat request:', error)
             return reply.code(500)
