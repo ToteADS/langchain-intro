@@ -4,13 +4,13 @@
   "description": "introducao ao langchain",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "langgraph:serve": "npx @langchain/langgraph-cli@latest dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --env-file= .env --inspect --watch src/index.ts",
-    "test:dev": "node --env-file= .env --inspect --watch tests/**/*.test.ts"
+    "dev": "node --env-file=.env --inspect --watch src/index.ts",
+    "test:dev": "node --env-file=.env --inspect --test --watch \"tests/**/*.test.ts\""
   },
   "keywords": [],
   "dependencies": {
