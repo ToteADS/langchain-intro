@@ -9,5 +9,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "@types/node": "^24.19.2",
+    "fastify": "^5.7.4"
+  }
 }
